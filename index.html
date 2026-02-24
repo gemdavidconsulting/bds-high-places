@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>High Places Youth Ministry — Student Intake</title>
+  <meta name="description"
+    content="Student intake form for BDS High Places Youth Ministry. Register for career guidance, mentorship, and personal development programs." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- Decorative background shapes -->
+  <div class="bg-shape bg-shape-1"></div>
+  <div class="bg-shape bg-shape-2"></div>
+  <div class="bg-shape bg-shape-3"></div>
+
+  <!-- Navigation -->
+  <nav class="site-nav" id="site-nav">
+    <div class="nav-inner">
+      <a href="home.html" class="nav-logo-link">
+        <img src="BDS_FinalLogo.png" alt="BDS" class="nav-logo" />
+        <span class="nav-brand">High Places</span>
+      </a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="home.html" class="nav-link">Home</a></li>
+        <li><a href="calendar.html" class="nav-link">Calendar</a></li>
+        <li><a href="flyer.html" class="nav-link">Flyer</a></li>
+        <li><a href="index.html" class="nav-link nav-cta active">Apply Now</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <!-- Header -->
+    <header class="header" id="header">
+      <div class="logo-row">
+        <img src="BDS_FinalLogo.png" alt="BDS — Breaking D Silence Deliverance & Healing Ministry" class="logo"
+          id="logo" />
+        <div class="header-text">
+          <h1 id="site-title">High Places</h1>
+          <p class="subtitle" id="site-subtitle">Youth Ministry — Student Intake Form</p>
+        </div>
+      </div>
+      <p class="header-description" id="header-desc">
+        Welcome! Please fill out the form below to register for the High Places Youth Ministry program.
+        Your information helps us match you with the best career guidance, mentorship, and personal development
+        opportunities.
+      </p>
+    </header>
+
+    <!-- Form -->
+    <form id="intake-form" class="intake-form" novalidate>
+      <!-- Personal Info Section -->
+      <fieldset class="form-section" id="section-personal">
+        <legend class="section-title">
+          <span class="section-icon">👤</span>
+          Personal Information
+        </legend>
+        <div class="form-grid">
+          <div class="form-group" id="group-fullname">
+            <label for="fullName">Full Name <span class="required">*</span></label>
+            <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required />
+            <span class="error-msg" id="error-fullName"></span>
+          </div>
+          <div class="form-group" id="group-age">
+            <label for="age">Age <span class="required">*</span></label>
+            <input type="number" id="age" name="age" placeholder="Your age" min="10" max="30" required />
+            <span class="error-msg" id="error-age"></span>
+          </div>
+          <div class="form-group" id="group-email">
+            <label for="email">Email Address <span class="required">*</span></label>
+            <input type="email" id="email" name="email" placeholder="your.email@example.com" required />
+            <span class="error-msg" id="error-email"></span>
+          </div>
+          <div class="form-group" id="group-phone">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="(000) 000-0000" />
+            <span class="error-msg" id="error-phone"></span>
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- Education Section -->
+      <fieldset class="form-section" id="section-education">
+        <legend class="section-title">
+          <span class="section-icon">🎓</span>
+          Education & Location
+        </legend>
+        <div class="form-grid">
+          <div class="form-group" id="group-school">
+            <label for="school">School Name</label>
+            <input type="text" id="school" name="school" placeholder="Your school" />
+          </div>
+          <div class="form-group" id="group-grade">
+            <label for="grade">Grade / Year</label>
+            <select id="grade" name="grade">
+              <option value="">Select grade...</option>
+              <option value="6th">6th Grade</option>
+              <option value="7th">7th Grade</option>
+              <option value="8th">8th Grade</option>
+              <option value="9th">9th Grade</option>
+              <option value="10th">10th Grade</option>
+              <option value="11th">11th Grade</option>
+              <option value="12th">12th Grade</option>
+              <option value="College">College / University</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="form-group full-width" id="group-zone">
+            <label for="zone">Zone / Neighborhood Area <span class="required">*</span></label>
+            <input type="text" id="zone" name="zone" placeholder="Your zone or neighborhood" required />
+            <span class="error-msg" id="error-zone"></span>
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- Interests Section -->
+      <fieldset class="form-section" id="section-interests">
+        <legend class="section-title">
+          <span class="section-icon">🚀</span>
+          Career Interests & Goals
+        </legend>
+        <div class="form-group" id="group-interests">
+          <label>Primary Career Interests <span class="required">*</span></label>
+          <p class="field-hint">Select all that apply</p>
+          <div class="checkbox-grid" id="interests-grid">
+            <label class="checkbox-card" id="interest-tech">
+              <input type="checkbox" name="interests" value="Technology & IT" />
+              <span class="checkbox-label">💻 Technology & IT</span>
+            </label>
+            <label class="checkbox-card" id="interest-health">
+              <input type="checkbox" name="interests" value="Healthcare & Medicine" />
+              <span class="checkbox-label">🏥 Healthcare & Medicine</span>
+            </label>
+            <label class="checkbox-card" id="interest-arts">
+              <input type="checkbox" name="interests" value="Arts & Creative" />
+              <span class="checkbox-label">🎨 Arts & Creative</span>
+            </label>
+            <label class="checkbox-card" id="interest-business">
+              <input type="checkbox" name="interests" value="Business & Finance" />
+              <span class="checkbox-label">📊 Business & Finance</span>
+            </label>
+            <label class="checkbox-card" id="interest-education">
+              <input type="checkbox" name="interests" value="Education & Teaching" />
+              <span class="checkbox-label">📚 Education & Teaching</span>
+            </label>
+            <label class="checkbox-card" id="interest-trades">
+              <input type="checkbox" name="interests" value="Skilled Trades" />
+              <span class="checkbox-label">🔧 Skilled Trades</span>
+            </label>
+            <label class="checkbox-card" id="interest-law">
+              <input type="checkbox" name="interests" value="Law & Government" />
+              <span class="checkbox-label">⚖️ Law & Government</span>
+            </label>
+            <label class="checkbox-card" id="interest-sports">
+              <input type="checkbox" name="interests" value="Sports & Fitness" />
+              <span class="checkbox-label">⚽ Sports & Fitness</span>
+            </label>
+            <label class="checkbox-card" id="interest-ministry">
+              <input type="checkbox" name="interests" value="Ministry & Community Service" />
+              <span class="checkbox-label">🙏 Ministry & Service</span>
+            </label>
+            <label class="checkbox-card" id="interest-other">
+              <input type="checkbox" name="interests" value="Other" />
+              <span class="checkbox-label">✨ Other</span>
+            </label>
+          </div>
+          <span class="error-msg" id="error-interests"></span>
+        </div>
+
+        <div class="form-group" id="group-goals">
+          <label for="goals">What are your goals? What do you hope to gain from this program?</label>
+          <textarea id="goals" name="goals" rows="4"
+            placeholder="Tell us about your dreams, aspirations, and what you'd like to learn..."></textarea>
+        </div>
+      </fieldset>
+
+      <!-- Additional Notes -->
+      <fieldset class="form-section" id="section-notes">
+        <legend class="section-title">
+          <span class="section-icon">📝</span>
+          Additional Information
+        </legend>
+        <div class="form-group" id="group-notes">
+          <label for="notes">Anything else you'd like us to know?</label>
+          <textarea id="notes" name="notes" rows="3"
+            placeholder="Allergies, special needs, scheduling preferences, anything else..."></textarea>
+        </div>
+        <div class="form-group" id="group-parent">
+          <label for="parentContact">Parent / Guardian Contact (for minors)</label>
+          <input type="text" id="parentContact" name="parentContact"
+            placeholder="Parent/guardian name & phone number" />
+        </div>
+      </fieldset>
+
+      <!-- Submit area -->
+      <div class="submit-area" id="submit-area">
+        <button type="submit" class="submit-btn" id="submit-btn">
+          <span class="btn-text">Submit Application</span>
+          <span class="btn-loader" id="btn-loader"></span>
+        </button>
+        <p class="form-disclaimer" id="form-disclaimer">
+          By submitting this form, you agree to participate in the High Places Youth Ministry program.
+          Your information is kept confidential and used only for program purposes.
+        </p>
+      </div>
+    </form>
+
+    <!-- Success Message (hidden by default) -->
+    <div class="success-overlay" id="success-overlay">
+      <div class="success-card" id="success-card">
+        <div class="success-icon">🎉</div>
+        <h2>Application Submitted!</h2>
+        <p>Thank you for registering for High Places Youth Ministry. We'll be in touch soon with next steps!</p>
+        <button class="submit-btn" id="reset-btn" onclick="resetForm()">Submit Another</button>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+      <p>&copy; 2026 BDS — Breaking D Silence Deliverance & Healing Ministry</p>
+      <p class="footer-tagline">Empowering youth to reach their highest potential</p>
+    </footer>
+  </div>
+
+  <script src="nav.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>

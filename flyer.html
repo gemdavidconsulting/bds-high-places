@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>High Places Youth Ministry — Digital Flyer</title>
+    <meta name="description" content="Shareable digital flyer for BDS High Places Youth Ministry." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="flyer-page-light">
+
+    <!-- Navigation (Hidden when printing via CSS) -->
+    <nav class="site-nav" id="site-nav">
+        <div class="nav-inner">
+            <a href="home.html" class="nav-logo-link">
+                <img src="BDS_FinalLogo.png" alt="BDS" class="nav-logo" />
+                <span class="nav-brand">High Places</span>
+            </a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="home.html" class="nav-link">Home</a></li>
+                <li><a href="calendar.html" class="nav-link">Calendar</a></li>
+                <li><a href="flyer.html" class="nav-link active">Flyer</a></li>
+                <li><a href="index.html" class="nav-link nav-cta">Apply Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Digital Party Flyer Container -->
+    <div class="digital-flyer-wrapper reveal" style="padding-top: 100px;">
+
+        <!-- Controls overlay (Not part of the actual flyer image, hidden on print) -->
+        <div class="digital-controls no-print">
+            <p>Save image to phone or share link</p>
+            <button class="submit-btn" id="print-btn" onclick="window.print()">🖨️ Print / Save PDF</button>
+        </div>
+
+        <!-- THE FLYER -->
+        <div class="official-flyer-container" id="printable-flyer"
+            style="width: 100%; max-width: 800px; margin: 0 auto; box-shadow: 0 20px 50px rgba(0,0,0,0.15); border-radius: 12px; overflow: hidden;">
+            <img src="images/official-flyer.png" alt="High Places Official Flyer"
+                style="width: 100%; display: block; height: auto;" />
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer no-print" id="footer"
+        style="margin-top: 40px; background: transparent; border: none; color: #fff;">
+        <p>&copy; 2026 BDS — Breaking D Silence Deliverance & Healing Ministry</p>
+    </footer>
+
+    <script src="nav.js"></script>
+    <script src="interactions.js"></script>
+</body>
+
+</html>
